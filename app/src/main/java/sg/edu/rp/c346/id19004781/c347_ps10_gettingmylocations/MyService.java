@@ -64,6 +64,9 @@ public class MyService extends Service {
     public void onDestroy() {
         Log.d("MyService", "Service exited");
         super.onDestroy();
+
+        // stopping the process
+        player.stop();
     }
 
     private DownloadBinder mBinder = new DownloadBinder();
